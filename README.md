@@ -2,7 +2,6 @@
 
 ## Setting Up the Project
 
-```html
 <ol>
     <li>Create a new Expo app with routing support:</li>
     <pre><code>npx create-expo-app@latest -e with-router ./</code></pre>
