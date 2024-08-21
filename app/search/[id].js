@@ -14,6 +14,8 @@ import { ScreenHeaderBtn, NearbyJobCard } from "../../components";
 import { COLORS, icons, SIZES } from "../../constants";
 import styles from "../../styles/search";
 
+const rapiApiKey = process.env.EXPO_PUBLIC_RAPID_API_KEY;
+
 const JobSearch = () => {
   const params = useLocalSearchParams();
   const router = useRouter();
@@ -32,7 +34,7 @@ const JobSearch = () => {
         method: "GET",
         url: `https://jsearch.p.rapidapi.com/search`,
         headers: {
-          "X-RapidAPI-Key": "",
+          "X-RapidAPI-Key": rapiApiKey,
           "X-RapidAPI-Host": "jsearch.p.rapidapi.com",
         },
         params: {
